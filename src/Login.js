@@ -33,21 +33,55 @@ const useStyles = makeStyles((theme) => ({
     }
 
     return (
-        <div class='container'>
+        <Container className={classes.comtainer} maxWidth='xs'>
         {/* <h2>{input} </h2> */}
         <form>
-        <div class='login-inputs'>
-        <input name ='firstname' type ='text' placeholder='FirstName'value={firstname} onChange={(event)=> setFirstName(event.target.value)}/>
-        <input name ='lastname' type ='text' placeholder='LastName' value ={lastname} onChange={(event)=> setLastName(event.target.value)}/>
-        <input  name ='email' type='text' placeholder='Email Address' value ={email} onChange={(event)=> setEmail(event.target.value)} />
-        </div>
-        <div class ='button'>
-        <button type='submit' onClick={handleSubmit} >Register</button>
-        </div>
+          <Grid container spacing = {3}>
+        <Grid item xs ={12}>
+          <Grid container spacing ={2}>
+          <Grid item xs ={12}>
+        <TextField 
+                   variant = 'outlined'
+                   fullWidth
+                   name ='firstname'
+                   label= 'First Name' 
+                   type ='text' 
+                   value={firstname} 
+                   onChange={(event)=> setFirstName(event.target.value)}/>
+        </Grid>
+        <Grid item xs = {12}>
+        <TextField 
+                   variant ='outlined'
+                   fullWidth
+                   label ='Last Name'
+                   name ='lastname'
+                   type ='text'
+                   value ={lastname} 
+                   onChange={(event)=> setLastName(event.target.value)}/>
+        </Grid> 
+        <Grid item xs={12}>
+        <TextField 
+                   variant = 'outlined'
+                   fullWidth
+                   name ='email'
+                   type='text' 
+                   label ='Email'
+                   value ={email} 
+                   onChange={(event)=> setEmail(event.target.value)} />
+        </Grid>
+        </Grid>
+        </Grid>
+       <Grid item xs ={12}>
+        <Button 
+                color='secondary' 
+                fullWidth type='submit'
+                variant='contained' 
+                onClick={handleSubmit} >Register 
+        </Button>
+        </Grid>
+        </Grid>
         </form>
-        <h1> whoa </h1>
-        </div>
-        
+        </Container>
     )
 }
 
