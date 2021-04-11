@@ -73,10 +73,10 @@ const useStyles = makeStyles((theme) => ({
         </Grid>
        <Grid item xs ={12}>
         <Button 
-                color='secondary' 
+                color='primary' 
                 fullWidth type='submit'
                 variant='contained' 
-                onClick={handleSubmit} >Register 
+                onClick={handleSubmit} > Register
         </Button>
         </Grid>
         </Grid>
